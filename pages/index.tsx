@@ -1,8 +1,6 @@
-import { Heading } from '@chakra-ui/layout';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -13,9 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Heading as="h1" pt="10">
-        this is the home page
-      </Heading>
+      <div>
+        <h1>this is the home page</h1>
+      </div>
     </div>
   );
 }

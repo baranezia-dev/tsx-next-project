@@ -1,19 +1,20 @@
-import { Box, Container, Heading } from '@chakra-ui/layout';
 import Head from 'next/head';
 
 interface LayoutProps {}
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <Container h="100vh">
-      <Heading as="h1">Project Section</Heading>
+    <div>
+      <div>
+        <h1>Project Section</h1>
+      </div>
 
-      <Box>{children}</Box>
+      <div>{children}</div>
 
-      <Box pt="20">
+      <div>
         <p>Copyright 2021 - Project by Bara</p>
-      </Box>
-    </Container>
+      </div>
+    </div>
   );
 };
 
