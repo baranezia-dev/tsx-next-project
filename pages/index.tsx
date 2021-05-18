@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <div>
-        <h1>this is the home page</h1>
+        <h1>it goes for the content of the home page</h1>
       </div>
     </div>
   );

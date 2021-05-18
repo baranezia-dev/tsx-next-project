@@ -1,19 +1,22 @@
 import Head from 'next/head';
+import layout from '../styles/Layout.module.css';
 
 interface LayoutProps {}
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div>
-      <div>
-        <h1>Project Section</h1>
-      </div>
+    <div className={layout.container}>
+      <main className={layout.main}>
+        <header>
+          <h1 className={layout.title}>Project Section</h1>
+        </header>
 
-      <div>{children}</div>
+        <div>{children}</div>
 
-      <div>
-        <p>Copyright 2021 - Project by Bara</p>
-      </div>
+        <footer className={layout.footer}>
+          <p>Copyright 2021 - This Project</p>
+        </footer>
+      </main>
     </div>
   );
 };
