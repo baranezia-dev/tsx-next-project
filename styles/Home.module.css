@@ -1,0 +1,33 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card__elements {
+  max-width: 400px;
+  padding: 1rem;
+  margin: 1rem;
+  text-decoration: none;
+  border: 1px solid #38444d;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.card__elements:hover,
+.card__elements:focus,
+.card__elements:active {
+  border-color: #d8e3e7;
+  color: #d8e3e7;
+}
+
+.description {
+  text-align: center;
+}
+
+.description h2 {
+  margin: 0;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
