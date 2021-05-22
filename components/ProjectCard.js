@@ -20,7 +20,14 @@ export default function ProjectCard({ project }) {
           </a>
         </Link>
         <p>{description}</p>
-        <span>{tags}</span>
+      </div>
+
+      <div className={styles.tags}>
+        {tags.map((tag) => (
+          <span key={tag} className={styles.hashtag}>
+            {tag}
+          </span>
+        ))}
       </div>
     </div>
   );

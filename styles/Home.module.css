@@ -8,6 +8,7 @@
   padding: 1rem;
   margin: 1rem;
   text-decoration: none;
+  text-align: center;
   border: 1px solid #38444d;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
@@ -17,17 +18,34 @@
 .card__elements:focus,
 .card__elements:active {
   border-color: #d8e3e7;
-  color: #d8e3e7;
 }
 
 .description {
-  text-align: center;
+  margin: 1rem 0;
 }
 
 .description h2 {
   margin: 0;
 }
 
+.description p {
+  line-height: 1.5;
+}
+
 .link:hover {
   text-decoration: underline;
+}
+
+.tags {
+  margin: 2rem 0 1rem 0;
+}
+
+.hashtag {
+  margin: 0.5rem;
+  padding: 0 0.5rem 0.25rem 0.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.025rem;
+  background-color: #12151d;
+  border-radius: 10px;
+  cursor: pointer;
 }

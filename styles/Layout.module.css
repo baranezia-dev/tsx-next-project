@@ -23,6 +23,12 @@
   font-size: 3.5rem;
 }
 
+.title span {
+  color: #15202b;
+  -webkit-text-stroke: 1.5px #1da1f2;
+}
+
 .footer {
   margin-top: auto;
+  padding-top: 2rem;
 }
