@@ -1,0 +1,17 @@
+.banner {
+  max-width: 800px;
+}
+
+.content {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.hashtag {
+  margin: 0 1rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  background-color: #12151d;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}

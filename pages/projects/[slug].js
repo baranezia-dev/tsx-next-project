@@ -1,4 +1,7 @@
 import { createClient } from 'contentful';
+import Image from 'next/image';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import styles from '../../styles/Slug.module.css';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -37,11 +40,27 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export default function ProjectDetails({ project }) {
-  console.log(project);
+  const { title, description, tags, slug, thumbnail, details } = project.fields;
+
+  const { width, height } = thumbnail.fields.file.details.image;
 
   return (
     <>
-      <h2>{project.fields.title}</h2>
+      <div className={styles.banner}>
+        <Image src={'https:' + thumbnail.fields.file.url} width={width} height={height} />
+      </div>
+      <div className={styles.content}>
+        <h2>{project.fields.title}</h2>
+
+        {tags.map((tag) => (
+          <span key={tag} className={styles.hashtag}>
+            {tag}
+          </span>
+        ))}
+        <hr />
+      </div>
+
+      <div>{documentToReactComponents(details)}</div>
     </>
   );
 }

@@ -7,12 +7,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className={layout.container}>
       <main className={layout.main}>
-        <header>
-          <h1 className={layout.title}>
-            Project <span>Showcase</span>
-          </h1>
-        </header>
-
         <div>{children}</div>
 
         <footer className={layout.footer}>
