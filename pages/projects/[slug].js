@@ -36,6 +36,7 @@ export const getStaticProps = async ({ params }) => {
   // pass the single items object
   return {
     props: { project: items[0] },
+    revalidate: 1, // in seconds for page re-generation
   };
 };
 

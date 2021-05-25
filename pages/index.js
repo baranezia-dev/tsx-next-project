@@ -12,11 +12,10 @@ export async function getStaticProps() {
 
   const res = await client.getEntries({ content_type: 'project' });
 
+  // any objects added are passing as a props called 'projects'
   return {
-    props: {
-      // any objects added are passing as a props called 'projects'
-      projects: res.items,
-    },
+    props: { projects: res.items },
+    revalidate: 1, // in seconds for page re-generation
   };
 }
 
