@@ -8,27 +8,30 @@ export default function ProjectCard({ project }) {
   const { width, height } = thumbnail.fields.file.details.image;
 
   return (
-    <div className={styles.card__elements}>
-      <div className={styles.image}>
-        <Image src={'https:' + thumbnail.fields.file.url} width={width} height={height} />
-      </div>
-
-      <div className={styles.description}>
+    <>
+      <div className={styles.card__elements}>
         <Link href={'/projects/' + slug}>
           <a className={styles.link}>
-            <h2>{title}</h2>
+            <div className={styles.image}>
+              <Image src={'https:' + thumbnail.fields.file.url} width={width} height={height} />
+            </div>
+
+            <div className={styles.description}>
+              <h2>{title}</h2>
+
+              <p>{description}</p>
+            </div>
+
+            <div className={styles.tags}>
+              {tags.map((tag) => (
+                <span key={tag} className={styles.hashtag}>
+                  {tag}
+                </span>
+              ))}
+            </div>
           </a>
         </Link>
-        <p>{description}</p>
       </div>
-
-      <div className={styles.tags}>
-        {tags.map((tag) => (
-          <span key={tag} className={styles.hashtag}>
-            {tag}
-          </span>
-        ))}
-      </div>
-    </div>
+    </>
   );
 }

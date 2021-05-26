@@ -32,20 +32,40 @@
   line-height: 1.5;
 }
 
-.link:hover {
-  text-decoration: underline;
-}
-
 .tags {
   margin: 2rem 0 1rem 0;
 }
 
 .hashtag {
+  display: inline-block;
   margin: 0.5rem;
-  padding: 0 0.5rem 0.25rem 0.5rem;
+  padding: 0 0.6rem 0.25rem 0.6rem;
   font-size: 0.9rem;
-  letter-spacing: 0.025rem;
+  font-weight: 500;
+  letter-spacing: 0.015rem;
   background-color: #12151d;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .description h2 {
+    font-size: 1.8rem;
+  }
+
+  .description p {
+    line-height: 1.8;
+  }
+
+  .tags {
+    margin-top: 1.5rem;
+  }
+
+  .hashtag {
+    margin: 0.35rem;
+  }
 }

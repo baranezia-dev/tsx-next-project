@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import layout from '../styles/Layout.module.css';
 
 interface HeaderProps {}
