@@ -31,11 +31,16 @@
 
 .footer {
   margin-top: auto;
-  padding-top: 2rem;
+  padding: 2rem 0;
 }
 
 @media (max-width: 600px) {
-  .container {
-    margin: 0 1rem;
+  .main {
+    padding: 4rem 0 0 0;
+  }
+
+  .title {
+    padding-bottom: 2rem;
+    line-height: 1.25;
   }
 }
