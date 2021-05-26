@@ -33,3 +33,9 @@
   margin-top: auto;
   padding-top: 2rem;
 }
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0 1rem;
+  }
+}

@@ -3,10 +3,13 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+.card__space {
+  margin: 1rem 0;
+}
+
 .card__elements {
   max-width: 400px;
   padding: 1rem;
-  margin: 1rem;
   text-decoration: none;
   text-align: center;
   border: 1px solid #38444d;

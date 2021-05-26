@@ -9,9 +9,9 @@ export default function ProjectCard({ project }) {
 
   return (
     <>
-      <div className={styles.card__elements}>
-        <Link href={'/projects/' + slug}>
-          <a className={styles.link}>
+      <Link href={'/projects/' + slug}>
+        <a className={styles.card__space}>
+          <div className={styles.card__elements}>
             <div className={styles.image}>
               <Image src={'https:' + thumbnail.fields.file.url} width={width} height={height} />
             </div>
@@ -29,9 +29,9 @@ export default function ProjectCard({ project }) {
                 </span>
               ))}
             </div>
-          </a>
-        </Link>
-      </div>
+          </div>
+        </a>
+      </Link>
     </>
   );
 }
