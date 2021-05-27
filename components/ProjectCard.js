@@ -9,7 +9,7 @@ export default function ProjectCard({ project }) {
 
   return (
     <>
-      <Link href={'/projects/' + slug}>
+      <Link href={'/' + slug}>
         <a className={styles.card__space}>
           <div className={styles.card__elements}>
             <div className={styles.image}>
