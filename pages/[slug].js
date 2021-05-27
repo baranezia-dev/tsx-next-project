@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import styles from '../styles/Slug.module.css';
+import FetchData from '../components/FetchData';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -23,7 +24,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -42,6 +43,8 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export default function ProjectDetails({ project }) {
+  if (!project) return <FetchData />;
+
   const { thumbnail, title, description, tags, slug, details } = project.fields;
 
   const { width, height } = thumbnail.fields.file.details.image;

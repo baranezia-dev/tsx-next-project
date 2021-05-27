@@ -29,6 +29,14 @@
   -webkit-text-stroke: 1.5px #1da1f2;
 }
 
+.fetch__data {
+  background-color: #12151d;
+  width: 700px;
+  height: 80px;
+  border-radius: 6px;
+  margin: 20px;
+}
+
 .footer {
   margin-top: auto;
   padding: 2rem 0;
