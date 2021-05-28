@@ -29,14 +29,6 @@
   -webkit-text-stroke: 1.5px #1da1f2;
 }
 
-.fetch__data {
-  background-color: #12151d;
-  width: 700px;
-  height: 80px;
-  border-radius: 6px;
-  margin: 20px;
-}
-
 .button {
   display: flex;
   align-items: center;
@@ -88,6 +80,12 @@
 .footer__element p {
   font-weight: 500;
   margin: 0.5rem 0;
+}
+
+/* layout for fetching data */
+
+.fetch__data {
+  font-size: 2rem;
 }
 
 @media (max-width: 600px) {
