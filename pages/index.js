@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { createClient } from 'contentful';
 import Header from '../components/Header';
 import ProjectCard from '../components/ProjectCard';
+import Button from '../components/Button';
 import styles from '../styles/Home.module.css';
 
 export async function getStaticProps() {
@@ -35,6 +36,8 @@ export default function Projects({ projects }) {
           <ProjectCard key={project.sys.id} project={project} />
         ))}
       </div>
+
+      <Button />
     </>
   );
 }
