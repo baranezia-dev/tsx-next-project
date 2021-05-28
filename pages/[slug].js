@@ -35,6 +35,16 @@ export const getStaticProps = async ({ params }) => {
     'fields.slug': params.slug, // match the items we want
   });
 
+  // conditional redirect
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    };
+  }
+
   // pass the single items object
   return {
     props: { project: items[0] },
