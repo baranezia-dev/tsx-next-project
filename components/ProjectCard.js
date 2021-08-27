@@ -1,37 +1,42 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from '../styles/Home.module.css';
+import Image from "next/image";
+import Link from "next/link";
+import styles from "../styles/Home.module.css";
 
 export default function ProjectCard({ project }) {
-  const { title, description, tags, slug, thumbnail } = project.fields;
+	const { title, description, tags, slug, thumbnail } = project.fields;
 
-  const { width, height } = thumbnail.fields.file.details.image;
+	const { width, height } = thumbnail.fields.file.details.image;
 
-  return (
-    <>
-      <Link href={'/' + slug}>
-        <a className={styles.card__space}>
-          <div className={styles.card__elements}>
-            <div className={styles.image}>
-              <Image src={'https:' + thumbnail.fields.file.url} width={width} height={height} />
-            </div>
+	return (
+		<>
+			<Link href={"/" + slug}>
+				<a className={styles.card__space}>
+					<div className={styles.card__elements}>
+						<div className={styles.image}>
+							<Image
+								src={"https:" + thumbnail.fields.file.url}
+								width={width}
+								height={height}
+								quality="90"
+							/>
+						</div>
 
-            <div className={styles.description}>
-              <h2>{title}</h2>
+						<div className={styles.description}>
+							<h2>{title}</h2>
 
-              <p>{description}</p>
-            </div>
+							<p>{description}</p>
+						</div>
 
-            <div className={styles.tags}>
-              {tags.map((tag) => (
-                <span key={tag} className={styles.hashtag}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        </a>
-      </Link>
-    </>
-  );
+						<div className={styles.tags}>
+							{tags.map((tag) => (
+								<span key={tag} className={styles.hashtag}>
+									{tag}
+								</span>
+							))}
+						</div>
+					</div>
+				</a>
+			</Link>
+		</>
+	);
 }
