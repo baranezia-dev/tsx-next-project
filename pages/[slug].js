@@ -67,15 +67,15 @@ export default function ProjectDetails({ project }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
+			<div className={styles.banner}>
+				<Image
+					src={"https:" + thumbnail.fields.file.url}
+					height={height}
+					width={width}
+					quality="90"
+				/>
+			</div>
 			<div className={styles.container}>
-				<div className={styles.banner}>
-					<Image
-						src={"https:" + thumbnail.fields.file.url}
-						height={height}
-						width={width}
-						quality="90"
-					/>
-				</div>
 				<div className={styles.content}>
 					<h2>{title}</h2>
 					<p>{description}</p>
