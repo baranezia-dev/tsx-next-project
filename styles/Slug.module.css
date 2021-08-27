@@ -42,8 +42,7 @@
 }
 
 .details p {
-	font-size: 1.125rem;
-	/* font-weight: 500; */
+	font-size: 1rem;
 	line-height: 1.8;
 }
 
@@ -71,8 +70,12 @@
 	padding-left: 2.2rem;
 }
 
-.details li > p {
+.details ul > li > p {
 	margin: 0.5rem 0;
+}
+
+.details ol > li > p {
+	margin: 1.5rem 0;
 }
 
 .details li::marker {
