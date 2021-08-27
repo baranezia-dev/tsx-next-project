@@ -31,7 +31,7 @@ const Footer: React.FC<FooterProps> = () => {
           <p>
             Licensed on{' '}
             <span className={layout.text__span}>
-              <a href="https://nextjs.org/">MIT License</a>.
+              <a href="https://github.com/ilhambara/tsc-next-project/blob/main/LICENSE">MIT License</a>.
             </span>{' '}
           </p>
         </div>
