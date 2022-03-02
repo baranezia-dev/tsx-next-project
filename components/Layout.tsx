@@ -1,19 +1,16 @@
-import layout from '../styles/Layout.module.css';
-import Footer from '../components/Footer';
+import * as React from "react";
+import { Container } from "@chakra-ui/react";
+import Footer from "../components/Footer";
 
-interface LayoutProps {}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+export const Layout: React.FC = ({ children }) => {
   return (
     <>
-      <div className={layout.container}>
-        <main className={layout.main}>
+      <Container maxW="container.xl" pt={8} centerContent>
+        <main>
           <div>{children}</div>
         </main>
-      </div>
+      </Container>
       <Footer />
     </>
   );
 };
-
-export default Layout;
